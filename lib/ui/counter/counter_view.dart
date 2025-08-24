@@ -10,9 +10,10 @@ class CounterView extends StatelessWidget {
     return ViewModelBuilder.reactive(
       viewModelBuilder: () => CounterViewmodel(),
       builder: (context, model, child) {
-        return Scaffold(
+       return Scaffold(
+          backgroundColor:  Color.fromARGB(255, 197, 192, 192),
           appBar: AppBar(title: Text('Counter View')),
-          body: Padding(
+           body: Padding(
             padding: const EdgeInsets.all(16.0),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -26,7 +27,7 @@ class CounterView extends StatelessWidget {
                 ),
                 ElevatedButton(
                   onPressed: model.addValueCounterInSingletonService,
-                  child: Text('Add to Singleton Counter'),
+                  child: Text('Add '),
                 ),
 
                 SizedBox(height: 16),
@@ -36,7 +37,7 @@ class CounterView extends StatelessWidget {
                 ),
                 ElevatedButton(
                   onPressed: model.addValueCounterInWithoutSingletonService,
-                  child: Text('Add to Separate Counter'),
+                  child: Text('Add'),
                 ),
 
                 SizedBox(height: 16),
