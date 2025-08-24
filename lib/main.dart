@@ -3,20 +3,19 @@ import 'package:learnstacked/app/app.locator.dart';
 import 'package:learnstacked/app/app.router.dart';
 import 'package:stacked_services/stacked_services.dart';
 
-void main() async{
+void main() async {
   await setupLocator();
   runApp(const learnstacked());
 }
+
 class learnstacked extends StatelessWidget {
   const learnstacked({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
       navigatorKey: StackedService.navigatorKey,
       onGenerateRoute: StackedRouter().onGenerateRoute,
-      home:  learnstacked(),
     );
   }
 }

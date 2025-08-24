@@ -8,17 +8,23 @@ class CounterView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ViewModelBuilder.reactive(
-      viewModelBuilder: ()=>CounterViewmodel(),
-       builder:(context,model,child){
+      viewModelBuilder: () => CounterViewmodel(),
+      builder: (context, model, child) {
         return Scaffold(
           body: Column(
             children: [
               Text(model.name),
-              Container(child: Text(model.name),)
+              Container(child: Text(model.name)),
+              Text(
+                'singleton SErvice value ${model.getCounterValueFromCounterService()}',
+              ),
+              Text(
+                'singleton SErvice value ${model.getCounterValueFromCounterServicSeparate()}',
+              ),
             ],
           ),
         );
-       }
-       );
+      },
+    );
   }
 }
