@@ -5,7 +5,7 @@ import 'package:stacked_services/stacked_services.dart';
 
 class CounterViewmodel extends BaseViewModel {
   String name = 'ali';
-  int counter = 0;
+  int counter = 10;
   final navigatioService = locator<NavigationService>();
   final counterService = locator<CounterService>();
   CounterService counterServiceSeparate = CounterService();
